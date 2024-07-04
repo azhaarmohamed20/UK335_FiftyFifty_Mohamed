@@ -11,12 +11,12 @@ export default function Coin ({onFlip}){
     const subscribe = () => {
         setSubscription(
         Accelerometer.addListener(({ x, y, z }) => {
-            if (Math.abs(x) > 0.9 || Math.abs(y) >0.9 || Math.abs(z) > 0.9) {
+            if (Math.abs(x) > 2 || Math.abs(y) >2 || Math.abs(z) > 2) {
             flipCoin();
             }
         })
         );
-        Accelerometer.setUpdateInterval(800);
+        Accelerometer.setUpdateInterval(150);
     };
 
     const unsubscribe = () => {

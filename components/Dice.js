@@ -5,17 +5,21 @@ import { TouchableOpacity } from "react-native";
 import * as Haptics from 'expo-haptics';
 
 export default function Dice({ onRoll }) {
-    const [diceNumber, setDiceNumber] = useState(1);
+    
+  const [diceNumber, setDiceNumber] = useState(1);
   const [subscription, setSubscription] = useState(null);
 
+
+  
   const subscribe = () => {
     setSubscription(
       Accelerometer.addListener(({ x, y, z }) => {
-        if (Math.abs(x) > 1 || Math.abs(y) > 1 || Math.abs(z) > 1) {
+        if (Math.abs(x) > 2 || Math.abs(y) > 2 | Math.abs(z) >2) {
           rollDice();
         }
       })
     );
+    Accelerometer.setUpdateInterval(150);
   };
 
   const unsubscribe = () => {
