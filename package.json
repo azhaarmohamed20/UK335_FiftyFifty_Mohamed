@@ -18,7 +18,8 @@
     "react-native-screens": "3.31.1",
     "expo-linking": "~6.3.1",
     "expo-constants": "~16.0.2",
-    "expo-sensors": "~13.0.9"
+    "expo-sensors": "~13.0.9",
+    "@react-native-segmented-control/segmented-control": "2.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
