@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Accelerometer } from 'expo-sensors';
 import { TouchableOpacity } from "react-native";
+import * as Haptics from 'expo-haptics';
 
 export default function Dice({ onRoll }) {
     const [diceNumber, setDiceNumber] = useState(1);
@@ -15,7 +16,7 @@ export default function Dice({ onRoll }) {
         }
       })
     );
-    Accelerometer.setUpdateInterval(1000);
+    Accelerometer.setUpdateInterval(800);
   };
 
   const unsubscribe = () => {
@@ -26,7 +27,8 @@ export default function Dice({ onRoll }) {
   const rollDice = () => {
     const newDiceNumber = Math.floor(Math.random() * 6) + 1;
     setDiceNumber(newDiceNumber);
-    onRoll(newDiceNumber); // Call the onRoll prop with the new dice number
+    onRoll(newDiceNumber);
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Rigid)
   };
 
   useEffect(() => {

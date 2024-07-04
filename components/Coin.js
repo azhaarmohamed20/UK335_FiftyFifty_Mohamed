@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Accelerometer } from 'expo-sensors';
 import { TouchableOpacity } from "react-native";
+import * as Haptics from 'expo-haptics';
 
 export default function Coin ({onFlip}){
     const [CoinNumber, setCoinNumber] = useState(1);
@@ -15,7 +16,7 @@ export default function Coin ({onFlip}){
             }
         })
         );
-        Accelerometer.setUpdateInterval(1000);
+        Accelerometer.setUpdateInterval(800);
     };
 
     const unsubscribe = () => {
@@ -27,6 +28,7 @@ export default function Coin ({onFlip}){
         const newCoinNumber = Math.floor(Math.random() * 2) + 1;
         setCoinNumber(newCoinNumber);
         onFlip(newCoinNumber); 
+        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Rigid)
     };
 
     useEffect(() => {

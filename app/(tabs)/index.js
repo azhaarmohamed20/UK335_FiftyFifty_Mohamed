@@ -56,7 +56,6 @@ export default function HomePage(){
             <Button title="Dice" onPress={() => SetView(1)} />
             <Button title="Coin" onPress={() => SetView(2)} />
           </View>
-          
           {ActiveView()}
         </View>
     )
