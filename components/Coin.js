@@ -11,7 +11,7 @@ export default function Coin ({onFlip}){
     const subscribe = () => {
         setSubscription(
         Accelerometer.addListener(({ x, y, z }) => {
-            if (Math.abs(x) > 1 || Math.abs(y) > 1 || Math.abs(z) > 1) {
+            if (Math.abs(x) > 0.9 || Math.abs(y) >0.9 || Math.abs(z) > 0.9) {
             flipCoin();
             }
         })
@@ -28,7 +28,9 @@ export default function Coin ({onFlip}){
         const newCoinNumber = Math.floor(Math.random() * 2) + 1;
         setCoinNumber(newCoinNumber);
         onFlip(newCoinNumber); 
-        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Rigid)
+        for(let i = 0; i <= 10; i++){
+          Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy)
+        }
     };
 
     useEffect(() => {
@@ -41,7 +43,7 @@ export default function Coin ({onFlip}){
         <View style={styles.container}>
         <Text style={styles.coinText}>{CoinNumber}</Text>
                 <TouchableOpacity onPress={() => flipCoin()} style={styles.button}>
-                    <Text style={styles.buttonText}>Roll Coin</Text>
+                    <Text style={styles.buttonText}>Flip Coin</Text>
                 </TouchableOpacity>
         </View>
     );

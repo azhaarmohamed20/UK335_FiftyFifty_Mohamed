@@ -16,7 +16,6 @@ export default function Dice({ onRoll }) {
         }
       })
     );
-    Accelerometer.setUpdateInterval(800);
   };
 
   const unsubscribe = () => {
@@ -28,7 +27,9 @@ export default function Dice({ onRoll }) {
     const newDiceNumber = Math.floor(Math.random() * 6) + 1;
     setDiceNumber(newDiceNumber);
     onRoll(newDiceNumber);
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Rigid)
+    for(let i = 0; i <= 10; i++){
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy)
+    }
   };
 
   useEffect(() => {

@@ -1,7 +1,8 @@
-import { Button, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import Dice from "../../components/Dice";
 import React,{useState} from "react";
 import Coin from "../../components/Coin";
+import Button from "../../components/Button";
 
 export default function HomePage(){
     const [latestRoll, setLatestRoll] = useState(1);
@@ -39,8 +40,7 @@ export default function HomePage(){
           );
         default:
           return (
-            <View style={styles.viewholder} >
-                <Text style={styles.title}>Fifty-Fifty</Text>
+            <View style={styles.viewholder} >     
                 <Text style={styles.latestRollText}>Latest Roll: {latestRoll}</Text>
                 <Dice onRoll={handleRoll} />
             </View>
@@ -51,10 +51,9 @@ export default function HomePage(){
 
     return(
         <View style={styles.container}>
-          <Text style={styles.title}>Fifty-Fifty</Text>
           <View style={styles.buttonholder}>
-            <Button title="Dice" onPress={() => SetView(1)} />
-            <Button title="Coin" onPress={() => SetView(2)} />
+            <Button label="Dice" onPress={() => SetView(1)} />
+            <Button label="Coin" onPress={() => SetView(2)} />
           </View>
           {ActiveView()}
         </View>
@@ -67,6 +66,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: '#fff',
+      position: 'relative'
     },
     latestRollText: {
       fontSize: 20,
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     },
     title : {
       fontSize: 25,
-      fontWeight: 'bold'
+      fontWeight: 'bold',
     },
     viewholder : {
       justifyContent: 'center',
@@ -83,8 +83,10 @@ const styles = StyleSheet.create({
     },
     buttonholder : {
       flexDirection: 'row',
-      backgroundColor: '#e6eefc',
+      position: 'absolute',
+      top: 0,
+      backgroundColor: '#2196F3',
       borderRadius: 20,
-      margin: 20
+      margin: 20,
     }
   });
