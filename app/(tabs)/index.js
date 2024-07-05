@@ -1,18 +1,22 @@
 import { StyleSheet, Text, View } from "react-native";
 import Dice from "../../components/Dice";
-import React,{useState} from "react";
+import React,{useState, useContext} from "react";
 import Coin from "../../components/Coin";
 import Button from "../../components/Button";
+import { RollHistoryContext } from "../../components/RollHistoryContext";
 
 export default function HomePage(){
     const [latestRoll, setLatestRoll] = useState(1);
     const [latestFlip, setLatestFlip] = useState(1);
+    const { rollHistory, setRollHistory } = useContext(RollHistoryContext);
 
     const handleRoll = (number) => {
         setLatestRoll(number);
+        setRollHistory([number, ...rollHistory]);
     };
     const handleFlip = (number) => {
       setLatestFlip(number);
+      setRollHistory([number, ...rollHistory]);
     };
 
 
