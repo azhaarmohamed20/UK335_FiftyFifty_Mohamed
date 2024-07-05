@@ -28,9 +28,7 @@ export default function Coin ({onFlip}){
         const newCoinNumber = Math.floor(Math.random() * 2) + 1;
         setCoinNumber(newCoinNumber);
         onFlip(newCoinNumber); 
-        for(let i = 0; i <= 10; i++){
-          Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy)
-        }
+        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy)
     };
 
     useEffect(() => {

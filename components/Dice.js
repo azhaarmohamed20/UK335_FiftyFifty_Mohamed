@@ -12,13 +12,13 @@ export default function Dice({ onRoll }) {
 
   
   const subscribe = () => {
-    setSubscription(
+   setSubscription(
       Accelerometer.addListener(({ x, y, z }) => {
         if (Math.abs(x) > 2 || Math.abs(y) > 2 | Math.abs(z) >2) {
           rollDice();
         }
       })
-    );
+    ); 
     Accelerometer.setUpdateInterval(150);
   };
 
@@ -31,9 +31,7 @@ export default function Dice({ onRoll }) {
     const newDiceNumber = Math.floor(Math.random() * 6) + 1;
     setDiceNumber(newDiceNumber);
     onRoll(newDiceNumber);
-    for(let i = 0; i <= 10; i++){
-      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy)
-    }
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy)
   };
 
   useEffect(() => {
