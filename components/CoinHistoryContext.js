@@ -6,6 +6,7 @@ export const CoinFlipHistoryContext = createContext();
 export const CoinFlipHistoryProvider = ({ children }) => {
   const [coinFlipHistory, setCoinFlipHistory] = useState([]);
 
+
   return (
     <CoinFlipHistoryContext.Provider value={{ coinFlipHistory, setCoinFlipHistory }}>
       {children}

@@ -10,7 +10,7 @@ export default function HomePage(){
     const [latestRoll, setLatestRoll] = useState(1);
     const [latestFlip, setLatestFlip] = useState(1);
     const { diceRollHistory, setDiceRollHistory } = useContext(DiceRollHistoryContext);
-  const { coinFlipHistory, setCoinFlipHistory } = useContext(CoinFlipHistoryContext);
+    const { coinFlipHistory, setCoinFlipHistory } = useContext(CoinFlipHistoryContext);
 
     const handleRoll = (number) => {
         setLatestRoll(number);
