@@ -1,16 +1,24 @@
 // /app/screens/HistoryPage.js
 import React, { useContext } from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
-import { RollHistoryContext } from '../../components/RollHistoryContext';
+import { DiceRollHistoryContext } from '../../components/DiceHistoryContext';
+import { CoinFlipHistoryContext } from '../../components/CoinHistoryContext';
 
 const HistoryPage = () => {
-  const { rollHistory } = useContext(RollHistoryContext);
+  const { diceRollHistory } = useContext(DiceRollHistoryContext);
+  const { coinFlipHistory } = useContext(CoinFlipHistoryContext);
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Roll History</Text>
+      <Text style={styles.title}>Dice Roll History</Text>
       <FlatList
-        data={rollHistory}
+        data={diceRollHistory}
+        renderItem={({ item }) => <Text style={styles.item}>{item}</Text>}
+        keyExtractor={(item, index) => index.toString()}
+      />
+      <Text style={styles.title}>Coin Flip History</Text>
+      <FlatList
+        data={coinFlipHistory}
         renderItem={({ item }) => <Text style={styles.item}>{item}</Text>}
         keyExtractor={(item, index) => index.toString()}
       />

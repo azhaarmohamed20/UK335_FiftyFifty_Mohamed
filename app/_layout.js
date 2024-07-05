@@ -1,15 +1,18 @@
 import { Stack } from "expo-router";
-import { RollHistoryProvider } from "../components/RollHistoryContext";
+import {DiceRollHistoryProvider } from "../components/DiceHistoryContext";
+import { CoinFlipHistoryProvider } from "../components/CoinHistoryContext";
 
 export default function RootLayout(){
     return(
-        <RollHistoryProvider>
-            <Stack>
-                <Stack.Screen name='(tabs)' options={{
-                    headerShown: false
-                }} />
-            </Stack>
-        </RollHistoryProvider>
+        <DiceRollHistoryProvider>
+            <CoinFlipHistoryProvider>
+                <Stack>
+                    <Stack.Screen name='(tabs)' options={{
+                        headerShown: false
+                    }} />
+                </Stack>
+                </CoinFlipHistoryProvider>
+        </DiceRollHistoryProvider>
         
     )
 }

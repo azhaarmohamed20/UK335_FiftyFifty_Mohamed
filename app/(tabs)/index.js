@@ -3,20 +3,22 @@ import Dice from "../../components/Dice";
 import React,{useState, useContext} from "react";
 import Coin from "../../components/Coin";
 import Button from "../../components/Button";
-import { RollHistoryContext } from "../../components/RollHistoryContext";
+import { DiceRollHistoryContext } from "../../components/DiceHistoryContext";
+import { CoinFlipHistoryContext } from "../../components/CoinHistoryContext";
 
 export default function HomePage(){
     const [latestRoll, setLatestRoll] = useState(1);
     const [latestFlip, setLatestFlip] = useState(1);
-    const { rollHistory, setRollHistory } = useContext(RollHistoryContext);
+    const { diceRollHistory, setDiceRollHistory } = useContext(DiceRollHistoryContext);
+  const { coinFlipHistory, setCoinFlipHistory } = useContext(CoinFlipHistoryContext);
 
     const handleRoll = (number) => {
         setLatestRoll(number);
-        setRollHistory([number, ...rollHistory]);
+        setDiceRollHistory([number, ...diceRollHistory]);
     };
     const handleFlip = (number) => {
       setLatestFlip(number);
-      setRollHistory([number, ...rollHistory]);
+      setCoinFlipHistory([number, ...coinFlipHistory]);
     };
 
 
