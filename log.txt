@@ -1,0 +1,152 @@
+commit 23547a52e9cdbc177d39043dd7f3d38bb3ef1d77
+Merge: cb00f82 5005400
+Author: Azhaar Mohamed <112543567+azhaarmohamed20@users.noreply.github.com>
+Date:   Fri Jul 5 11:30:31 2024 +0200
+
+    Merge pull request #1 from azhaarmohamed20/dev
+    
+    Merge dev into main
+
+commit 50054005ea8e39167226a17d4801f9d5ac3540e9
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Fri Jul 5 11:25:48 2024 +0200
+
+    Change in app.json
+
+commit adc4c6f0efbdbec63311576feaa1a1236f0c267f
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Fri Jul 5 10:19:50 2024 +0200
+
+    add eas to build apk and update packages
+
+commit 6f9b871c1eca16bb96321d3f09f2712746d559ed
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Fri Jul 5 09:40:06 2024 +0200
+
+    add custom icon to app
+
+commit 9c295ee31bf506962591f8b68cc4d5c852a9b7a4
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Fri Jul 5 09:31:52 2024 +0200
+
+    update packages
+
+commit 60ffec322510df0362523f2bf1571e3986508d73
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Fri Jul 5 09:08:12 2024 +0200
+
+    Change Vibration to Heavy Impact
+
+commit d21e7d961875b28dbf575ec719f46ccf6e719ab2
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Fri Jul 5 09:05:12 2024 +0200
+
+    Fix styling issue where are only shown half
+
+commit 332f4bd3bb7a8cc6eaec1ef640be4080f165c1c0
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Fri Jul 5 08:59:53 2024 +0200
+
+    fix styling in history page
+
+commit 2713f0ba208d2894474b82918610082abddf1337
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Fri Jul 5 08:20:16 2024 +0200
+
+    split Roll History in to 2 separate Contexts
+
+commit 12fda8482d0d038eacd5aed2b5fce9bc413897b0
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Fri Jul 5 08:13:10 2024 +0200
+
+    Implement a History Page for both dice and coin
+
+commit 26c638e4f14c4440b0f5e74368b5dd1a42dd5ca9
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 14:44:06 2024 +0200
+
+    Fix Update Interval of Dice and Coin
+
+commit 2f72ce0bb61741681b7703108d59b9a94705adaa
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 14:20:21 2024 +0200
+
+    Make some small styling changes
+
+commit a387e2507e9a420aa3ecf71909deffadf874942a
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 13:32:42 2024 +0200
+
+    Install Expo vector icons and add to tab bar
+
+commit abb7d47394d924193ed653678f42fc90c02d0891
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 13:19:30 2024 +0200
+
+    Add Vibration Haptics to Coin and Dice Roll
+
+commit 9d331c74b8603dbb283654932eff8af66f729d0d
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 11:24:50 2024 +0200
+
+    Install expo haptics
+
+commit 195803d44d38b78c4234e44da8c4b19051fed7ed
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 11:00:31 2024 +0200
+
+    Add Segmented Control to switch between Dice and Coin
+
+commit 81f5832a468cc7a43352a5d86bb505a4c108ae8c
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 10:35:30 2024 +0200
+
+    Create Coin Component
+
+commit 835029032cedc92b43cd0c578e7d2093667f4d2c
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 09:46:02 2024 +0200
+
+    install segmented control
+
+commit 49cad762eecaae442528bb57b19a6dfdda50c7f6
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 09:31:13 2024 +0200
+
+    Add Dice Component with Acceleromator
+
+commit a65bdbc5c1e497468d094fa2334b748b7cb21350
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 09:16:58 2024 +0200
+
+    install expo sensors
+
+commit b5012e91ddb6562f0085cfa3920ac6cff0e909e6
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 09:06:39 2024 +0200
+
+    Add titles of tabs to Layout
+
+commit b8a68eac58c6f5d3e6d83a5d1ee1e26b0fd8bb79
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 09:03:10 2024 +0200
+
+    Add History Page to tabs
+
+commit 772ac5e3a51d8ccb8671de487243dc11f004bda6
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 09:03:01 2024 +0200
+
+    Setup Tabs with Expo Router
+
+commit cbbf2fc77517c4dbdeb04783355f64c25bc01804
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 09:02:36 2024 +0200
+
+    Rename HomePage to index.js
+
+commit cb00f825064f246dc6d7bb0ddf69fee94fca0eec
+Author: Azhaar Mohamed <azhaar.mohamed20@gmail.com>
+Date:   Thu Jul 4 08:48:18 2024 +0200
+
+    Init Project

@@ -17,13 +17,13 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/images/virtual_dice_and_coin_icon.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.azhi.UK335_FiftyFifty_Mohamed"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/images/virtual_dice_and_coin_icon.png"
     },
     "plugins": [
       "expo-router"
